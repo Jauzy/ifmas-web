@@ -3,10 +3,12 @@ import { graphql } from 'gatsby'
 import Container from '@material-ui/core/Container'
 import Grid from '@material-ui/core/Grid'
 import Paper from '@material-ui/core/Paper'
+import Typography from '@material-ui/core/Typography'
 
 import Layout from "../Components/Layout"
 import SEO from "../Components/Seo"
 import Article from '../Components/Article'
+import Recommended from '../Components/Recommended'
 
 const Articles = ({ data }) => {
     return (
@@ -20,8 +22,13 @@ const Articles = ({ data }) => {
                         ))}
                     </Grid>
                     <Grid item xs={12} md={4}>
-                        <Paper style={{ height: '100%' }}>
-
+                        <Paper style={{ height: '100%', padding: '1vw', borderRadius: '1em' }}>
+                          <Typography variant='h5'>
+                            Recommended
+                          </Typography>
+                          {data?.allMarkdownRemark?.nodes.map(article => (
+                            <Recommended data={article} key={article.id} />
+                          ))}
                         </Paper>
                     </Grid>
                 </Grid>
