@@ -10,15 +10,21 @@ import CardActions from '@material-ui/core/CardActions'
 import CardMedia from '@material-ui/core/CardMedia'
 import CardContent from '@material-ui/core/CardContent'
 import Box from '@material-ui/core/Box'
-import ArrowForwardIosIcon from '@material-ui/icons/ArrowForwardIos';
+import ArrowForwardIosIcon from '@material-ui/icons/ArrowForwardIos'
+import List from '@material-ui/core/List'
+import ListItem from '@material-ui/core/ListItem'
+import ListItemIcon from '@material-ui/core/ListItemIcon'
+import ListItemText from '@material-ui/core/ListItemText'
+import Divider from '@material-ui/core/Divider';
 
-import purple from '@material-ui/core/colors/purple';
-import deepPurple from '@material-ui/core/colors/deepPurple';
+import purple from '@material-ui/core/colors/purple'
+import deepPurple from '@material-ui/core/colors/deepPurple'
 
 import ImageBG from "../images/main.jpg"
 
 import Layout from "../Components/Layout"
 import SEO from "../Components/Seo"
+import CheckList from "../Components/CheckList"
 
 const accent = deepPurple['500']; // #e040fb
 
@@ -84,9 +90,35 @@ const IndexPage = ({ data }) => {
 
             <Box pt={6}>
               <Grid container xs={12}>
-                <Typography variant='h2' style={{ fontWeight: 'normal' }}> Why is it worth trusting <br/> our company?</Typography>
+                <Grid item xs={12}>
+                  <Typography variant='h2' style={{ fontWeight: 'normal' }}> Why is it worth trusting <br/> our company?</Typography>
+                </Grid>
+
+                <Grid item xs={6}>
+                  <List style={{ width: '100%', maxWidth: 360 }}>
+                    {
+                      [
+                        "A professional team",
+                        "Low prices",
+                        "Solidty",
+                        "The best quality",
+                        "10 years of experience"
+                      ].map((textData, index) => {
+                        if (index < 4) {
+                          return <>
+                            <CheckList text={textData}></CheckList>
+                            <Divider />
+                          </>
+                        }
+                        return <CheckList text={textData}></CheckList>
+                      })
+                    }
+                  </List>
+                </Grid>
+
               </Grid>
             </Box>
+
           </Grid>
 
         </Container>
