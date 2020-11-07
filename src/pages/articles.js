@@ -9,7 +9,7 @@ import Layout from "../Components/Layout"
 import SEO from "../Components/Seo"
 import Article from '../Components/Article'
 import Recommended from '../Components/Recommended'
-import Pagination from '../Components/Paging'
+
 
 const Articles = ({ data }) => {
     return (
