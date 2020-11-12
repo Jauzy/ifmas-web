@@ -4,6 +4,10 @@ import ListItemIcon from '@material-ui/core/ListItemIcon'
 import ListItemText from '@material-ui/core/ListItemText'
 import CheckCircleOutlineIcon from '@material-ui/icons/CheckCircleOutline'
 
+import deepPurple from '@material-ui/core/colors/deepPurple'
+
+const accent = deepPurple['500']; // #e040fb
+
 // const CheckList = ({ text }) => {
 //     return text.map((textData,index)=> {
 //         if (index<4) {
@@ -34,10 +38,11 @@ const CheckList = ({ text }) => {
         return (
             <ListItem alignItems="flex-start">
                 <ListItemIcon>
-                    <CheckCircleOutlineIcon />
+                    <CheckCircleOutlineIcon style={{color: `${accent}`}} />
                 </ListItemIcon>
                 <ListItemText
                     primary= {text}
+                    style={{marginTop: '2%'}}
                 />
             </ListItem>
         )
