@@ -24,6 +24,7 @@ import deepPurple from '@material-ui/core/colors/deepPurple'
 
 import ImageBG from "../images/main.jpg"
 import Mechanic from "../images/Mechanic.jpg"
+import Engine from "../images/Engine.jpg"
 
 import Layout from "../Components/Layout"
 import SEO from "../Components/Seo"
@@ -47,6 +48,8 @@ const IndexPage = ({ data }) => {
 				<SEO title="Home" />
 				<Container style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', minHeight: '100vh', paddingTop: '15vh' }}>
 					<Grid container spacing={3}>
+						
+						{/* Bagian - Utama front page */}
 						<Grid item container sm={12}>
 							<Grid item sm={12}>
 								<Typography variant="h1" component="h2" style={{ fontWeight: 'bold', color: 'white' }}>
@@ -134,37 +137,38 @@ const IndexPage = ({ data }) => {
 							</Grid>
 						</Box>
 
-						<Grid container justify="center" alignItems="center" sm={12} style={{ marginTop: '5%',boxShadow: '0 4px 8px 0 grey' }}>
+						{/* Bagian - Icon serive yang di berikan  */}
+						<Grid container justify="center" alignItems="center" sm={12} style={{ marginTop: '5%', boxShadow: '0 4px 8px 0 grey' }}>
 							{/* TODO: make component for this */}
 							<Grid sm item>
 								<Box display='flex' flexDirection='column' alignItems="center" justifyContent="center" p={3} style={{ backgroundColor: `${accent}` }}>
-									<AccessTimeIcon style={{ fontSize: 100, marginBottom: '10%', color: 'white'}}></AccessTimeIcon>
-									<Typography variant='h5' align='center' style={{color: 'white'}}>Tire Replacement</Typography>
+									<AccessTimeIcon style={{ fontSize: 100, marginBottom: '10%', color: 'white' }}></AccessTimeIcon>
+									<Typography variant='h5' align='center' style={{ color: 'white' }}>Tire Replacement</Typography>
 								</Box>
 							</Grid>
 							<Grid sm item>
 								<Box display='flex' flexDirection='column' alignItems="center" justifyContent="center" p={3} style={{ backgroundColor: `${deepPurple[600]}` }}>
-									<AccessTimeIcon style={{ fontSize: 100, marginBottom: '10%', color: 'white'}}></AccessTimeIcon>
-									<Typography variant='h5' align='center' style={{color: 'white'}}>Tire Replacement</Typography>
+									<AccessTimeIcon style={{ fontSize: 100, marginBottom: '10%', color: 'white' }}></AccessTimeIcon>
+									<Typography variant='h5' align='center' style={{ color: 'white' }}>Tire Replacement</Typography>
 								</Box>
 							</Grid>
 							<Grid sm item>
 								<Box display='flex' flexDirection='column' alignItems="center" justifyContent="center" p={3} style={{ backgroundColor: `${deepPurple[700]}` }}>
-									<AccessTimeIcon style={{ fontSize: 100, marginBottom: '10%', color: 'white'}}></AccessTimeIcon>
-									<Typography variant='h5' align='center' style={{color: 'white'}}>Tire Replacement</Typography>
+									<AccessTimeIcon style={{ fontSize: 100, marginBottom: '10%', color: 'white' }}></AccessTimeIcon>
+									<Typography variant='h5' align='center' style={{ color: 'white' }}>Tire Replacement</Typography>
 								</Box>
 							</Grid>
 							<Grid sm item>
 								<Box display='flex' flexDirection='column' alignItems="center" justifyContent="center" p={3} style={{ backgroundColor: `${deepPurple[800]}` }}>
-									<AccessTimeIcon style={{ fontSize: 100, marginBottom: '10%', color: 'white'}}></AccessTimeIcon>
-									<Typography variant='h5' align='center' style={{color: 'white'}}>Tire Replacement</Typography>
+									<AccessTimeIcon style={{ fontSize: 100, marginBottom: '10%', color: 'white' }}></AccessTimeIcon>
+									<Typography variant='h5' align='center' style={{ color: 'white' }}>Tire Replacement</Typography>
 								</Box>
 							</Grid>
-						
+
 						</Grid>
 
 						{/* Bagian - Owner  */}
-						<Typography variant='h2' align='right' gutterBottom style={{fontWeight: 'normal', marginTop: '5%' }}>
+						<Typography variant='h2' align='right' gutterBottom style={{ fontWeight: 'normal', marginTop: '5%' }}>
 							Meet the owner
 						</Typography>
 
@@ -177,7 +181,7 @@ const IndexPage = ({ data }) => {
 											image={Mechanic}
 										/>
 										<CardContent>
-											<Typography item gutterBottom variant="h6" style={{color: 'white'}}>
+											<Typography item gutterBottom variant="h6" style={{ color: 'white' }}>
 												"Pak Ali showing off some skill with that hand"
                       </Typography>
 										</CardContent>
@@ -185,19 +189,39 @@ const IndexPage = ({ data }) => {
 								</Grid>
 								<Grid item sm={4}>
 									<Box p={5} my={5}>
-									<Typography variant='h3' gutterBottom>Hi!, My name is <br /> Pak Ali</Typography>
-									<Typography variant='h3' gutterBottom>I'm the owner</Typography>
-									<Typography variant='body1'>
-										Vehicle mechanic with 9 years of experience in automotive maintenance, repair, and servicing. Extensive experience working with
-										gasoline and diesel vehicles, examining automotive electronic equipment, and testing and tuning exhaust systems. Possess ASE
-										A Series certification. bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla
+										<Typography variant='h3' gutterBottom>Hi!, My name is <br /> Pak Ali</Typography>
+										<Typography variant='h3' gutterBottom>I'm the owner</Typography>
+										<Typography variant='body1'>
+											Vehicle mechanic with 9 years of experience in automotive maintenance, repair, and servicing. Extensive experience working with
+											gasoline and diesel vehicles, examining automotive electronic equipment, and testing and tuning exhaust systems. Possess ASE
+											A Series certification. bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla
 									</Typography>
 									</Box>
 								</Grid>
 							</Grid>
 						</Paper>
 
-						
+						{/* WIP	 */}
+						<Grid container sm={12}>
+							<Box bgcolor="grey.700" position="absolute" zIndex="tooltip">
+								Button goes here
+							</Box>
+							<Box
+								bgcolor="purple"
+								position="relative"
+								zIndex="modal"
+								height='200px'
+								width
+							>
+								<Grid container>
+									<Grid sm item>solidddddddddddddddddd color</Grid>
+									<Grid sm item>image</Grid>
+								</Grid>
+							</Box>
+						</Grid>
+
+
+
 
 
 
