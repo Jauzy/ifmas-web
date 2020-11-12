@@ -4,6 +4,7 @@ import { createMuiTheme, ThemeProvider, responsiveFontSizes } from '@material-ui
 import CssBaseline from '@material-ui/core/CssBaseline';
 
 import Navbar from './Navbar'
+import Footer from './Footer'
 import { isDarkMode } from '../../static/atoms/utils'
 
 const Layout = props => {
@@ -13,7 +14,8 @@ const Layout = props => {
     palette: {
       type: !darkMode ? 'light' : 'dark',
       background: {
-        default: !darkMode ? '#EDF1F5' : '#0B1622',
+        // EDF1F5
+        default: !darkMode ? '#FAFAFA' : '#0B1622',
         paper: !darkMode ? '#FAFAFA' : '#151F2E'
       }
     },
@@ -24,7 +26,10 @@ const Layout = props => {
     <ThemeProvider theme={theme}>
       <CssBaseline />
       <Navbar />
-      {children}
+      <main style={{ padding: '5em 0' }}>
+        {children}
+      </main>
+      <Footer />
     </ThemeProvider>
   )
 }
