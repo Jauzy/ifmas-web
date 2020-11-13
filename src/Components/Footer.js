@@ -10,16 +10,19 @@ import EmailIcon from '@material-ui/icons/Email';
 const Footer = props => {
     return (
         <Box style={{ margin: '2em 5vw' }}>
-            <Grid container spacing={3}>
+            <Grid container spacing={4}>
                 <Grid item xs={12} md={4}>
                     <Typography variant='h6'>
                         About Us
                     </Typography>
-                    <Typography variant='h2'>
+                    <Typography variant='h6'>
                         Bengkel Pak Ali
                     </Typography>
-                    <Typography variant='' color='textSecondary'>
+                    <Typography variant='p' color='textSecondary'>
                         Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+                    </Typography>
+                    <Typography variant='p' color='textSecondary'>
+                        Alamat : SMK Assalam Bandung (Jalan Situ Tarate Jl. Cibaduyut Raya, Cangkuang Kulon, Kec. Dayeuhkolot, Kota Bandung, Jawa Barat 40265)
                     </Typography>
                 </Grid>
                 <Grid item xs={12} md={4}>
@@ -27,11 +30,14 @@ const Footer = props => {
                         Social Media
                     </Typography>
                     <IconButton color='primary'>
-                        <WhatsAppIcon />
+                       <a href="https://wa.link/q9abjj" target="_blank"><WhatsAppIcon /></a>
                     </IconButton>
                     <IconButton color='secondary'>
                         <EmailIcon />
                     </IconButton>
+                    <Typography variant='p' color='textSecondary'>
+                        WhatsApp Number : 082219738569 (Nomer Ilham)
+                    </Typography>
                 </Grid>
                 <Grid item xs={12} md={4}>
                     <Typography variant='h6'>
