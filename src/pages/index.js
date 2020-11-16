@@ -68,7 +68,7 @@ const IndexPage = ({ data }) => {
                   </Button>
 								</Grid>
 								<Grid item>
-								<a href="https://wa.link/q9abjj" target="_blank"><Button variant="contained" size='large' style={mainButtonStyle}>contact us</Button></a>
+								<a href="https://wa.link/vv1ltb" target="_blank"><Button variant="contained" size='large' style={mainButtonStyle}>contact us</Button></a>
 								</Grid>
 							</Grid>
 						</Grid>

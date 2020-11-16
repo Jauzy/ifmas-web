@@ -30,13 +30,13 @@ const Footer = props => {
                         Social Media
                     </Typography>
                     <IconButton color='primary'>
-                       <a href="https://wa.link/q9abjj" target="_blank"><WhatsAppIcon /></a>
+                       <a href="https://wa.link/vv1ltb" target="_blank"><WhatsAppIcon /></a>
                     </IconButton>
                     <IconButton color='secondary'>
                         <EmailIcon />
                     </IconButton>
                     <Typography variant='p' color='textSecondary'>
-                        WhatsApp Number : 082219738569 (Nomer Ilham)
+                        WhatsApp Number : 085798097127
                     </Typography>
                 </Grid>
                 <Grid item xs={12} md={4}>
