@@ -54,18 +54,18 @@ const IndexPage = ({ data }) => {
 							<Grid item sm={12}>
 								<Typography variant="h1" component="h2" style={{ fontWeight: 'bold', color: 'white' }}>
 									Professional repair <br />
-                  of passanger cars.
-                </Typography>
+									of passanger cars.
+								</Typography>
 								<Typography variant="h5" gutterBottom style={{ color: 'white' }}>
 									Lorem ipsum dolor sit amet, consectetur adipiscing elit
-                </Typography>
+                				</Typography>
 							</Grid>
 
 							<Grid container spacing={4} sm={12} style={{ paddingTop: '2vh' }}>
 								<Grid item>
 									<Button variant="contained" size='large' style={{ color: 'white', backgroundColor: `${accent}`, ...mainButtonStyle }}>
 										Check our services
-                  </Button>
+                  					</Button>
 								</Grid>
 								<Grid item>
 								<a href="https://wa.link/q9abjj" target="_blank"><Button variant="contained" size='large' style={mainButtonStyle}>contact us</Button></a>
@@ -75,7 +75,7 @@ const IndexPage = ({ data }) => {
 
 						<Grid container sm={12} justify="flex-end" alignItems="flex-end">
 							<Grid item xs={12} sm={3}>
-								<Card elevation={10} square>
+								<Card elevation={8} square>
 									<CardActionArea>
 										<CardMedia
 											style={{ height: '200px' }}
@@ -85,7 +85,7 @@ const IndexPage = ({ data }) => {
 											<Grid container>
 												<Typography item gutterBottom variant="h6">
 													Discover More
-                        </Typography>
+                       							 </Typography>
 												<ArrowForwardIosIcon item fontSize='small' style={{ marginTop: '0.72vh', marginLeft: '0.7vh' }}></ArrowForwardIosIcon>
 											</Grid>
 										</CardContent>
@@ -126,13 +126,13 @@ const IndexPage = ({ data }) => {
 								<Grid item sm={6}>
 									<Typography variant='h4' style={{ marginBottom: '3%' }}>
 										Ameno, ameno do re-, ameno dori me <br />
-                    Ameno dori me, ameno do-
-                  </Typography>
+                  						Ameno dori me, ameno do-
+             					     </Typography>
 									<Typography variant='body1' style={{ fontWeight: 'lighter' }}>
 										Doge (pronounced /ˈdoʊdʒ/ DOHJ) is a slang term for "dog" that is primarily associated with pictures of Shiba Inus (nicknamed "Shibe") and
 										internal monologue captions on Tumblr. These photos may be photoshopped to change the dog's face or captioned with interior monologues in
 										Comic Sans font. Starting in2017, Ironic Doge formats gained prevalence over the original wholesome version.
-                    </Typography>
+                 					</Typography>
 								</Grid>
 							</Grid>
 						</Box>
@@ -172,7 +172,7 @@ const IndexPage = ({ data }) => {
 							Meet the owner
 						</Typography>
 
-						<Paper elevation={10} square >
+						<Paper elevation={8} square >
 							<Grid container sm={12} justify="center" >
 								<Grid item sm={8}>
 									<Card square elevation={8} style={{ backgroundColor: `${accent}` }}>
@@ -183,7 +183,7 @@ const IndexPage = ({ data }) => {
 										<CardContent>
 											<Typography item gutterBottom variant="h6" style={{ color: 'white' }}>
 												"Pak Ali showing off some skill with that hand"
-                      </Typography>
+                    						</Typography>
 										</CardContent>
 									</Card>
 								</Grid>
@@ -202,23 +202,33 @@ const IndexPage = ({ data }) => {
 						</Paper>
 
 						{/* WIP	 */}
-						<Grid container sm={12}>
+						<Grid container sm={12} style={{marginTop: '5%'}}>
 							<Box bgcolor="grey.700" position="absolute" zIndex="tooltip">
 								Button goes here
 							</Box>
+							
 							<Box
-								bgcolor="purple"
+								bgcolor= {accent}
 								position="relative"
 								zIndex="modal"
-								height='200px'
+								height='100%'
 								width
+								boxShadow={10}
 							>
 								<Grid container>
-									<Grid sm item>solidddddddddddddddddd color</Grid>
-									<Grid sm item>image</Grid>
+									<Grid sm item></Grid>
+									<Grid sm item>
+										<Card square>
+										<CardMedia
+											style={{ height: 0, paddingTop: '70%' }}
+											image={Engine}
+										/>
+										</Card>
+									</Grid>
 								</Grid>
 							</Box>
 						</Grid>
+
 
 
 
