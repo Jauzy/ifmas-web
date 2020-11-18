@@ -1,4 +1,4 @@
-import React from "react"
+import React, { useState } from "react"
 import Container from '@material-ui/core/Container'
 import Grid from '@material-ui/core/Grid'
 import Typography from '@material-ui/core/Typography'
@@ -15,9 +15,11 @@ import ListItem from '@material-ui/core/ListItem'
 import ListItemIcon from '@material-ui/core/ListItemIcon'
 import ListItemText from '@material-ui/core/ListItemText'
 import Divider from '@material-ui/core/Divider'
+import TextField from '@material-ui/core/TextField'
+import Link from '@material-ui/core/Link'
 
 import ArrowForwardIosIcon from '@material-ui/icons/ArrowForwardIos'
-import AccessTimeIcon from '@material-ui/icons/AccessTime';
+import AccessTimeIcon from '@material-ui/icons/AccessTime'
 
 import purple from '@material-ui/core/colors/purple'
 import deepPurple from '@material-ui/core/colors/deepPurple'
@@ -41,7 +43,33 @@ const mainButtonStyle = {
 
 
 
+
+
+
+
+
 const IndexPage = ({ data }) => {
+	
+	const [nama,setVal] = useState('')
+	const [kendaraan,setKendaran] = useState('')
+	const [masalah,setMasalah] = useState('')
+	
+	function getWaLink() {
+			return `https://wa.me/6285798097127?text=Hallo,+nama+saya+${nama}+dan+saya+mempunyai+${kendaraan}+dengan+${masalah}+`
+	}
+		
+	function prosesValName(t) {
+			setVal(t.target.value.replace(" ", "+"))
+	}
+		
+	function prosesValKendaraan(t) {
+		setKendaran(t.target.value.replace(" ", "+"))
+	}
+	
+	function prosesValMasalah(t) {
+			setMasalah(t.target.value.replace(" ", "+"))
+	}
+
 	return (
 		<div style={{ height: '80vh', backgroundImage: `url(${ImageBG})`, backgroundSize: 'cover', backgroundRepeat: 'no-repeat' }}>
 			<Layout>
@@ -201,39 +229,34 @@ const IndexPage = ({ data }) => {
 							</Grid>
 						</Paper>
 
-						{/* WIP	 */}
-						<Grid container sm={12} style={{marginTop: '5%'}}>
-							<Box bgcolor="grey.700" position="absolute" zIndex="tooltip">
-								Button goes here
-							</Box>
 							
-							<Box
-								bgcolor= {accent}
-								position="relative"
-								zIndex="modal"
-								height='100%'
-								width
-								boxShadow={10}
+						{/* WIP	 */}
+						<Grid container sm style={{marginTop: '5%'}}>
+							<Box 
+								width height={'100%'} 
+								mb={10} textAlign='center' 
+								style={{backgroundColor: `${accent}`, backgroundImage: `url(${Engine})`, backgroundRepeat: 'no-repeat', backgroundSize: '50%',backgroundPosition: 'right'}}
 							>
-								<Grid container>
-									<Grid sm item></Grid>
-									<Grid sm item>
-										<Card square>
-										<CardMedia
-											style={{ height: 0, paddingTop: '70%' }}
-											image={Engine}
-										/>
-										</Card>
-									</Grid>
-								</Grid>
+								<Typography variant='h2' style={{ fontWeight: 'normal', marginTop: '5%', color: 'white' }}>Need a Fix?</Typography>
+								<Typography variant='body1' style={{ fontWeight: 'normal', color: 'white', marginBottom: '2%' }}>Lorem lorem lorem ipsum ipsum</Typography>
+								<form  autoComplete="off">
+									{/* Repeating?*/}
+									<TextField type='text' label="Nama" variant="filled" style={{ backgroundColor: 'white' }} onChange={t => prosesValName(t)} />
+									<TextField type='text' label="Nama Kendaraan" variant="filled" style={{ backgroundColor: 'white' }} onChange={t => prosesValKendaraan(t)} />
+									<TextField type='text'label="Masalah Kendaraan" variant="filled" style={{ backgroundColor: 'white' }} onChange={t => prosesValMasalah(t) } />
+									<a
+										href={getWaLink()} 
+										target="_blank"
+									>
+										<Button variant="contained" size='large' style={{ color: 'white', backgroundColor: `${deepPurple[900]}`, ...mainButtonStyle }}>
+											BOOKING
+										</Button>
+									</a>
+										
+								</form>
+								
 							</Box>
 						</Grid>
-
-
-
-
-
-
 
 					</Grid>
 				</Container>
