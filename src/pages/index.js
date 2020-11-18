@@ -1,4 +1,4 @@
-import React, { useState } from "react"
+import React, { useState, useRef } from "react"
 import Container from '@material-ui/core/Container'
 import Grid from '@material-ui/core/Grid'
 import Typography from '@material-ui/core/Typography'
@@ -42,6 +42,7 @@ const mainButtonStyle = {
 }
 
 
+var element = document.getElementById("service");
 
 
 
@@ -53,6 +54,10 @@ const IndexPage = ({ data }) => {
 	const [nama,setVal] = useState('')
 	const [kendaraan,setKendaran] = useState('')
 	const [masalah,setMasalah] = useState('')
+
+	const myRef = useRef(null)
+
+	const executeScroll = () => myRef.current.scrollIntoView({behavior: "smooth"})
 	
 	function getWaLink() {
 			return `https://wa.me/6285798097127?text=Hallo,+nama+saya+${nama}+dan+saya+mempunyai+${kendaraan}+dengan+${masalah}+`
@@ -91,7 +96,7 @@ const IndexPage = ({ data }) => {
 
 							<Grid container spacing={4} sm={12} style={{ paddingTop: '2vh' }}>
 								<Grid item>
-									<Button variant="contained" size='large' style={{ color: 'white', backgroundColor: `${accent}`, ...mainButtonStyle }}>
+									<Button variant="contained" size='large' onClick={executeScroll} style={{ color: 'white', backgroundColor: `${accent}`, ...mainButtonStyle }}>
 										Check our services
                   					</Button>
 								</Grid>
@@ -123,7 +128,7 @@ const IndexPage = ({ data }) => {
 						</Grid>
 
 						{/* Bagian - Why is it worth... */}
-						<Box pt={1}>
+						<Box ref={myRef} pt={1}>
 							<Grid container sm={12} spacing={3}>
 								<Grid item sm={12}>
 									<Typography variant='h2' style={{ fontWeight: 'normal' }}> Why is it worth trusting <br /> our company?</Typography>
